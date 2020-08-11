@@ -1,34 +1,48 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
-
-
+let votingAge= '19';
+if (votingAge >'18')
+{
+    console.log ('true');
+}
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-
-
+let color = "blue"
+let opinion = "harsh";
+if(opinion === "soft"){
+    color = "pink";
+}
+else if (opinion === "harsh"){
+    color = "red";
+}
+console.log (color);
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
-
-
+let year = "1999"
+console.log(Number(year));
 
 //Task d: Write a function to multiply a*b 
 
+           //used a function declaration
 
-
+function multiply (a,b){
+    return a*b;
+}
+console.log (multiply(2,5));
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
-
+function multiply(age,dogYears) {
+return age * dogYears;
+}
+console.log (multiply (29,7));
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -48,8 +62,34 @@
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
 
+
+function pounds(age, weight){
+
+if (age>=1 && weight<=5){
+        return .05*weight;
+}
+else if (age>=1 && weight>5 && weight<=10){
+   return .04*weight;
+}
+else if (age>=1 && weight>11 && weight<=15){
+    return .03*weight;
+}
+else if (age>=1 && wight>15) {
+    return .02*weight;
+}
+else if (age<1 && age >= .583) {
+    return .04 *weight;
+}
+else if (age <.583 && age >=.333){
+    return .05*weight;
+}
+
+else if (age <.033 && age >=.166){
+return .1* weight;
+}
+}
+console.log (pounds(1,15));
 
 
 
@@ -60,8 +100,47 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+/*let rock = 1 
+let paper = 2
+let scissors =3 */
+
+ /*function game (player){  
+    let computer= math.random()
+
+      if (player === 1 && computer ===1){
+       return "tie";
+      }
+      else if (player ===1 && computer ===2) {
+        return " computer wins ";
+           }
+      else if (player ===1 && computer ===3) {
+            return "player wins ";
+        }
+        else if (player ===2 && computer ===1) {
+                return "player wins ";
+        }
+        else if (player ===2 && computer ===2) {
+            return "tie";
+        }
+        else if (player ===2 && computer ===3) {
+            return "computer wins ";
+        }
+        else if (player ===3 && computer ===1) {
+            return "computer wins ";
+        }
+        else if (player ===3 && computer ===2) {
+            return "player wins ";
+        }
+        else if (player ===3 && computer ===3) {
+            return "tie";
+    }
+}
+console.log ((1,));
+
+
+
+
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
@@ -82,8 +161,11 @@
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
-
+function annoyingSong(){
+for (let i=99-1; i>0; i--) {
+   
+}
+console.log (i);
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -111,8 +193,3 @@
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
-
