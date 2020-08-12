@@ -1,8 +1,8 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
+//run automatically because its not a function - no need to invoke the function. if was in a function you would use return and console outside of function
 
-
-let votingAge= '19';
+let votingAge= '20';
 if (votingAge >'18'){
     console.log (true);
 }
@@ -103,11 +103,12 @@ console.log (pounds(1,15));
 
 /*let rock = 1 
 let paper = 2
-let scissors =3 */
+let scissors =0 */
+// here computer does not need to be passed ex (play, computer)
 
 
  function game (player){  
-    let computer= (math.round(math.random()*3))
+    let computer= (Math.round(Math.random()*3))
 
       if (player === 1 && computer ===1){
        return "tie";
@@ -115,7 +116,7 @@ let scissors =3 */
       else if (player ===1 && computer ===2) {
         return " computer choose paper! comptuer wins ";
            }
-      else if (player ===1 && computer ===3) {
+      else if (player ===1 && computer ===0) {
             return "computer choose scissors! player wins ";
         }
         else if (player ===2 && computer ===1) {
@@ -124,16 +125,16 @@ let scissors =3 */
         else if (player ===2 && computer ===2) {
             return "tie";
         }
-        else if (player ===2 && computer ===3) {
+        else if (player ===2 && computer ===0) {
             return "computer choose scissor! computer wins ";
         }
         else if (player ===3 && computer ===1) {
             return "computer choose rock! computer wins ";
         }
-        else if (player ===3 && computer ===2) {
+        else if (player ===0 && computer ===2) {
             return "computer choose paper! player wins ";
         }
-        else if (player ===3 && computer ===3) {
+        else if (player ===0 && computer ===0) {
             return "tie";
     }
 }
@@ -147,6 +148,8 @@ let scissors =3 */
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+
+//conversion/rate can be outside because they need passed through the mulitply function
 
 let conversion =0.621371
 function converter (km,conversion){
@@ -169,14 +172,13 @@ console.log (multiply(20,rate));
 
 //https://developers.google.com/web/updates/2015/01/ES6-Template-Strings
 
-/*function annoyingSong(oneless){
-    for (let i=99; i>0; i--) {
+function annoyingSong(number){
+    for (let i=number; i>0; i--) {
+
+        console.log (` ${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`); 
     }   
-    console.log (` ${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${oneless} bottles of soda on the wall`); 
-
-
 }
-
+annoyingSong(5);
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -188,8 +190,7 @@ console.log (multiply(20,rate));
 //60s should be D 
 //and anything below 60 should be F
   
-/*fuction gradeCalc (){
-for (let i=0; i < 100; i++) {
+function gradeCalc(grade){
         if (grade < 60){
           return "F";      
           } 
@@ -206,8 +207,8 @@ for (let i=0; i < 100; i++) {
         else if (grade >=90 && grade <=100) {
                return "A";
 }
-console.log(gradeCalc (72));
 }
+console.log(gradeCalc(72));
 
 
 
