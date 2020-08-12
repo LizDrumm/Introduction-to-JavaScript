@@ -151,18 +151,18 @@ let scissors =0 */
 
 //conversion/rate can be outside because they need passed through the mulitply function
 
-let conversion =0.621371
-function converter (km,conversion){
-    return km * conversion;
+
+function converter (km){
+    return km * 0.621371;
 }
-console.log (multiply(20,conversion));
+console.log (converter(20));
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-let rate = 30.48;
-function converter (feet,rate){
-    return feet * rate;
+
+function converter1 (feet){
+    return feet * 30.48;
 }
-console.log (multiply(20,rate));
+console.log (converter1(20));
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -202,7 +202,7 @@ function gradeCalc(grade){
               return "C"; 
         } 
         else if (grade >=80 && grade <=90) {
-              return "D";
+              return "B";
         } 
         else if (grade >=90 && grade <=100) {
                return "A";
